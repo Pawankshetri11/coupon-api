@@ -7,8 +7,8 @@ const app = express();
 app.use(cors());
 
 //  Replace with your actual store domain and token (NO http://, NO trailing slash)
-const SHOPIFY_STORE_DOMAIN = 'essence-essential-oils1.myshopify.com';
-const SHOPIFY_ACCESS_TOKEN = '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';
+const SHOPIFY_STORE_DOMAIN = process.env.SHOPIFY_STORE_DOMAIN;
+const SHOPIFY_ACCESS_TOKEN = process.env.SHOPIFY_ACCESS_TOKEN;
 
 // Generate a short random code
 function generateCouponCode() {
